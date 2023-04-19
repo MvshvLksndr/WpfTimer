@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfTimer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTimer"
+        mc:Ignorable="d"
+        Title="Таймер" Height="220" Width="190" MaxHeight="220" MinHeight="220" MaxWidth="190" MinWidth="190">
+    <Grid>
+
+        <StackPanel HorizontalAlignment="Center">
+            <Label>Установить таймер</Label>
+            <Border BorderThickness="1" BorderBrush="Black" Margin ="5">
+                <DockPanel HorizontalAlignment="Center" Margin="5">
+                    <ComboBox Name = "cbHours" ToolTip="Часы" Padding="5" Margin="5"/>
+                    <ComboBox Name = "cbMins" ToolTip="Минуты" Padding="5" Margin="5"/>
+                    <ComboBox Name = "cbSec" ToolTip="Секунды" Padding="5" Margin="5"/>
+                </DockPanel>
+            </Border>
+            <Border  BorderThickness="1" BorderBrush="Black" Margin ="5">
+                <TextBlock Text="00:00:00" Name="tbTime" HorizontalAlignment="Center" FontSize="20"/>
+            </Border>
+            <Button Margin="5" Click="ButtonStart_Click">Старт</Button>
+        </StackPanel>
+    </Grid>
+</Window>
